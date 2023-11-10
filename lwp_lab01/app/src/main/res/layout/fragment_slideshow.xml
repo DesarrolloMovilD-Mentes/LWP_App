@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.slideshow.SlideshowFragment"
+    android:background="#e8e8e8">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e8e8e8">
+
+        <!-- Encabezado -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="#f6f6f6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16px"
+            android:src="@mipmap/lwp_foreground">
+
+            <ImageView
+                android:id="@+id/picProfile"
+                android:layout_width="60dp"
+                android:layout_height="65dp"
+                android:src="@mipmap/perfil_launcher_foreground"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"   />
+
+            <TextView
+                android:id="@+id/powerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fiesta de conocimientos!"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/picProfile"
+                app:layout_constraintBottom_toBottomOf="@id/picProfile"
+                app:layout_constraintStart_toEndOf="@id/picProfile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/extraTable"
+            android:layout_width="1000px"
+            android:layout_height="200px"
+            android:background="#ffffff"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="700px"
+                android:src="@mipmap/fondo_launcher_foreground"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="El aprendizaje es un camino hacia el crecimiento y la comprensión."
+                android:textSize="20sp"
+                android:textColor="#f6f6f6"
+                android:gravity="left"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/horizontalLine"
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:background="#9868ef"
+            app:layout_constraintTop_toBottomOf="@id/extraTable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/firstBox"
+            android:layout_width="1000px"
+            android:layout_height="0dp"
+            android:background="#f6f6f6"
+            app:layout_constraintTop_toBottomOf="@id/extraTable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:src="@mipmap/ingles_launcher_foreground"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Segundo cuadro -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/secondBox"
+            android:layout_width="1000px"
+            android:layout_height="0dp"
+            android:background="#f6f6f6"
+            app:layout_constraintTop_toBottomOf="@id/firstBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:src="@mipmap/ingles2_launcher_foreground"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Tercer cuadro -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/thirdBox"
+            android:layout_width="1000px"
+            android:layout_height="0dp"
+            android:background="#f6f6f6"
+            app:layout_constraintTop_toBottomOf="@id/secondBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1300px"
+                android:src="@mipmap/espanol_launcher_foreground"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

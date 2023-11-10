@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Learn While Playing</string>
+    <string name="sign_in">Sign In</string>
+    <string name="txtid">Username</string>
+    <string name="txtpw">Password</string>
+    <string name="btn_signin">Sign In</string>
+    <string name="btn_register">Sign Up</string>
+    <string name="btn_forgotPsswd">Recover Password</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">About Us</string>
+    <string name="menu_slideshow">Virtual Classroom</string>
+    <string name="menu_Entities">Public Entities</string>
+    <string name="menu_Info">Credits</string>
+    <string name="message_home">Home Screen</string>
+    <string name="message_about_us">About Us Screen</string>
+    <string name="message_VC">Virtual Class Screen</string>
+    <string name="message_EP">Entities Screen</string>
+    <string name="message_Credits">Credit Screen</string>
+    <string name="txt_LWP">Learn While Playing, dedicated to virtual teaching!</string>
+    <string name="txt_LWP_mail">learngwhileplaying@gmail.com</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="text_INA">The INA trains, trains and certifies natural and legal persons, to contribute to personal growth, social mobility, productivity and competitiveness; that allows the country to adapt to the changes that the environment demands</string>
+    <string name="text_MEP">The Ministry of Public Education (MEP) of Costa Rica is the government ministry in charge of administering the country\'s public education system. Its main functions are to execute plans, programs and other determinations that guarantee basic, public and free general education, coordinate the relations of the Executive Branch</string>
+    <string name="title_entities">Entity Recognition</string>
+    <string name="title_Credits">Corresponding Credits</string>
+    <string name="text_Credits">Credits to those who participated in the creation of this project. Participants: Kenneth Piedra Vargas, William Cubero Navarro, Eduard Andrés Arias Quiros and Sebastián Alberto Mata Ortega</string>
+    <string name="about_text">LWP is a leading technology solutions company with more than 10 years of experience in the market. We are dedicated to developing high-quality mobile applications and web systems for our clients around the world.</string>
+    <string name="comment_hint">Leave a Comment</string>
+    <string name="submit_comment_text">Send Feedback</string>
+    <string name="contact_info_text">Contact: Address: Calle Principal #123, Ciudad Tech, Telephone: +123 456 7890, Email: info@lwp.com</string>
+</resources>

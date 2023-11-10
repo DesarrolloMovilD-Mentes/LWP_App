@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.credits.creditsFragment">
+
+
+    <TextView
+        android:id="@+id/title_Credits"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:text="@string/title_Credits"
+        android:textSize="19sp"
+        android:textAlignment="center"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/LWP"
+        android:layout_width="136dp"
+        android:layout_height="147dp"
+        android:src="@mipmap/lwp_round"
+        android:layout_below="@id/title_Credits"
+        android:layout_marginLeft="130dp"/>
+
+    <TextView
+        android:id="@+id/txt_INA"
+        android:layout_width="288dp"
+        android:layout_height="84dp"
+        android:text="@string/text_Credits"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        android:layout_below="@+id/LWP"
+        android:layout_marginLeft="45dp"/>
+</RelativeLayout>
