@@ -1,7 +1,8 @@
-package com.example.lwp_lab01
+package com.example.lwp_lab01.ui.users
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.lwp_lab01.R
 
 class ForgotPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

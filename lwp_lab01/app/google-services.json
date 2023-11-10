@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "505246962192",
+    "project_id": "lwproject-975e4",
+    "storage_bucket": "lwproject-975e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505246962192:android:2fc6683bc3fb43a431f095",
+        "android_client_info": {
+          "package_name": "com.example.lwp_lab01"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA47GUaPQY-_I-06nqNB-tL8fp6q3WlTiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

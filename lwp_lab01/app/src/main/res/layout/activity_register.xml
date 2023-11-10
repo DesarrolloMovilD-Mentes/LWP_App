@@ -28,6 +28,31 @@
         app:layout_constraintTop_toBottomOf="@id/nameEditText" />
 
     <EditText
+        android:id="@+id/registerSchoolGrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Grado Escolar"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameEditText" />
+
+    <EditText
+        android:id="@+id/registerWhoAmI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Quien Soy?"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameEditText" />
+
+<!--    Investigar como acceder a la camara o a las fotos para seleccionar una -->
+<!--    foto. SE COLOCA DESPUES DE WHOAMI REGISTER EDITEXT-->
+
+    <EditText
         android:id="@+id/registerPasswordEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

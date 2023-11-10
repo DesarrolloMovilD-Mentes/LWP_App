@@ -13,12 +13,12 @@
         android:layout_gravity="center"
         android:layout_marginStart="60dp"
         android:src="@mipmap/lwp_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/txtID"
+        app:layout_constraintBottom_toTopOf="@+id/txtCorreo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtID"
+        android:id="@+id/txtCorreo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -26,7 +26,7 @@
         android:layout_marginRight="16dp"
         android:autofillHints=""
         android:ems="15"
-        android:hint="@string/txtid"
+        android:hint="Correo Electronico"
         android:inputType="text"
         android:saveEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,7 @@
         android:saveEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtID" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
 
     <Button
         android:id="@+id/btnOK"
@@ -55,11 +55,11 @@
         android:layout_marginTop="24dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:onClick="ejecutar"
         android:text="@string/btn_signin"
+        android:onClick="ejecutar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPasswd" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswd"/>
 
     <TextView
         android:id="@+id/forgotPasswordText"

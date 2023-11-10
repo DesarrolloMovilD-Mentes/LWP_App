@@ -14,11 +14,18 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lwp_lab01.databinding.ActivityMainBinding
+import android.content.Context
+import android.widget.Toast
+import com.example.lwp_lab01.ui.users.SignIn
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    var auth = FirebaseAuth.getInstance()
+    var email: String? = null
+    var contra: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +51,26 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        // intenta obtener el token del usuario del local storage, sino llama a la ventana de registro
+        val prefe = getSharedPreferences("appData", Context.MODE_PRIVATE)
+        email = prefe.getString("email","")
+        contra = prefe.getString("contra","")
+
+        if(email.toString().trim { it <= ' ' }.length == 0){
+            val intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
+        }else {
+            val uid: String = auth.uid.toString()
+            if (uid == "null"){
+                auth.signInWithEmailAndPassword(email.toString(), contra.toString()).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        Toast.makeText(this,"Autenticación correcta", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+            obtenerDatos()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -57,10 +84,12 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
+    private fun obtenerDatos() {
+        Toast.makeText(this,"Esperando hacer algo importante", Toast.LENGTH_LONG).show()
+    }
     fun SignIn(view: View){
 
-        val intent = Intent(this, SignIn::class.java)
+        val intent = Intent(this, com.example.lwp_lab01.ui.users.SignIn::class.java)
         startActivity(intent)
     }
 }
