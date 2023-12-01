@@ -1,9 +1,9 @@
 <resources>
-<!--    strings for the main toolbar-->
+    <!--    strings for the main toolbar-->
     <string name="app_name">Aprende Mientras Juegas</string>
     <string name="txtLogOut">Cerrar Sesión</string>
 
-<!-- ===========================================================================    -->
+    <!-- ===========================================================================    -->
     <!--    Strings for login/register screen-->
     <string name="signin">Iniciar Sesión</string>
     <string name="hintRegister">Registrarse</string>
@@ -14,53 +14,51 @@
     <string name="txtForgotPass">¿Olvidaste tu contraseña?</string>
     <string name="txtExitFgPass">Volver al Inicio de Sesión</string>
     <string name="txtConfirmPass">Confirmar Contraseña</string>
-<!-- ===========================================================================    -->
+    <!-- ===========================================================================    -->
 
 
-<!--    Strings for login screen-->
+    <!--    Strings for login screen-->
     <string name="txtid">Usuario</string>
     <string name="txtpw">Contraseña</string>
-<!-- ===========================================================================    -->
+    <!-- ===========================================================================    -->
 
 
-
-<!--    Strings for register Screen-->
+    <!--    Strings for register Screen-->
     <string name="hintName">Nombre</string>
     <string name="hintEmail">Correo Eléctronico</string>
     <string name="hintScholarGrade">Grado Escolar</string>
     <string name="hintWhoIAm">Quien Soy?</string>
     <string name="txtPhoto">Insertar Foto</string>
-<!-- ===========================================================================    -->
+    <!-- ===========================================================================    -->
 
-<!--    Strings for SideNavigation Bar-->
+    <!--    Strings for SideNavigation Bar-->
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Nosotros</string>
     <string name="menu_slideshow">Aula Virtual</string>
     <string name="menu_Entities">Entidades Publicas</string>
     <string name="menu_Info">Creditos</string>
-<!-- ===========================================================================    -->
+    <!-- ===========================================================================    -->
 
 
-<!--Nav-Header Strings-->
+    <!--Nav-Header Strings-->
     <string name="txt_LWP">Aprende Mientras Juegas, dedicado al aprendizaje virtual!</string>
     <string name="txt_LWP_mail">learnwhileplaying@gmail.com</string>
-<!-- ===========================================================================    -->
+    <!-- ===========================================================================    -->
 
 
-
-<!-- Entities Strings-->
+    <!-- Entities Strings-->
     <string name="text_INA">El INA forma, capacita y certifica a personas físicas y jurídicas, para contribuir al crecimiento personal, movilidad social, productividad y competitividad; que permita al país adaptarse a los cambios que el entorno exige</string>
     <string name="text_MEP">El Ministerio de Educación Pública (MEP) de Costa Rica es el ministerio de gobierno encargado de administrar el sistema de educación pública del país.  Sus funciones principales son las de ejecutar planes, programas y otras determinaciones que garanticen una educación general básica, pública y gratuita, coordinar las relaciones del Poder Ejecutivo</string>
     <string name="title_entities">Entidades Reconocedoras</string>
     <!-- ===========================================================================    -->
 
-<!--Credits Strings-->
+    <!--Credits Strings-->
     <string name="title_Credits">Creditos Correspondientes</string>
     <string name="text_Credits">Creditos hacía quienes participaron en la creación de este proyecto. Participantes: Kenneth Piedra Vargas, William Cubero Navarro, Eduard Andrés Arias Quiros y Sebastián Alberto Mata Ortega</string>
     <!-- ===========================================================================    -->
 
 
-<!--About Us Strings-->
+    <!--About Us Strings-->
     <string name="about_text">LWP es una empresa líder en soluciones tecnológicas con más de 10 años de experiencia en el mercado. Nos dedicamos a desarrollar aplicaciones móviles y sistemas web de alta calidad para nuestros clientes en todo el mundo.</string>
     <string name="contact_info_text">Contacto: Dirección: Calle Principal #123, Ciudad Tech, Teléfono: +123 456 7890, Correo: info@lwp.com</string>
     <string name="comment_hint">Deja tu comentario…</string>
