@@ -1,4 +1,4 @@
-package com.example.lwp_lab01.ui
+package com.example.lwp_lab01.ui.PDF_List
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle

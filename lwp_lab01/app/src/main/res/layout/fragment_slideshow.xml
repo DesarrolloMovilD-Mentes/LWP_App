@@ -102,6 +102,7 @@
             android:layout_marginTop="16dp">
 
             <ImageView
+                android:id="@+id/englishModule"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:src="@mipmap/ingles_launcher_foreground"
