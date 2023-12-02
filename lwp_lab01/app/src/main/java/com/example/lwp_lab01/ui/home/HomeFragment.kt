@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.lwp_lab01.databinding.FragmentHomeBinding
 import com.example.lwp_lab01.R
 
+enum class ProviderType{
+    GOOGLE, FACEBOOK
+}
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
