@@ -1,15 +1,17 @@
 package com.example.lwp_lab01.entities
 
 class cls_PDFs {
-    var Name: Int = 0
+    var Names: String = ""
     var URL: String = ""
 
     constructor() {}
 
-    //constructor(CategoryID: Int, CategoryName: String, Description: String, urlImage: String) {
-        //this.CategoryID = CategoryID
-        //this.CategoryName = CategoryName
-        //this.Description = Description
-      //  this.urlImage = urlImage
-    //}
+    constructor(Names: String, URL: String) {
+        this.Names = Names
+        this.URL = URL
+    }
+    override fun toString(): String {
+        // Puedes ajustar el formato a tus necesidades
+        return "$Names"
+    }
 }
