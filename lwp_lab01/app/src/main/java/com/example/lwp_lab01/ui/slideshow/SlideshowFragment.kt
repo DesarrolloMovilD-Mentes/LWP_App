@@ -1,14 +1,15 @@
 package com.example.lwp_lab01.ui.slideshow
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.lwp_lab01.databinding.FragmentSlideshowBinding
 import com.example.lwp_lab01.R
+import com.example.lwp_lab01.ui.comment_List.CommentSection
 
 class SlideshowFragment : Fragment() {
 
@@ -25,6 +26,13 @@ class SlideshowFragment : Fragment() {
     ): View {
         _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val moduleEnglish = root.findViewById<ImageView>(R.id.englishModule)
+
+        moduleEnglish.setOnClickListener{
+            val EModule = Intent(context, CommentSection::class.java)
+            startActivity(EModule)
+        }
 
         return root
     }

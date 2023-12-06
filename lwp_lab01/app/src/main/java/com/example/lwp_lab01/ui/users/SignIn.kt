@@ -39,6 +39,8 @@ class SignIn : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         btnAutenticar = findViewById(R.id.btnOK)
+        btnGoogleAuth = findViewById(R.id.btnGoogle)
+        btnFacebookAuth = findViewById(R.id.btnFacebook)
         txtEmail = findViewById(R.id.txtCorreo)
         txtContra = findViewById(R.id.txtPasswd)
         forgotPasswordText = findViewById(R.id.forgotPasswordText)

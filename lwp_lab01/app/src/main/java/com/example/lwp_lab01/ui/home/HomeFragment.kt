@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.lwp_lab01.databinding.FragmentHomeBinding
 import com.example.lwp_lab01.R
 
+enum class ProviderType{
+    GOOGLE, FACEBOOK
+}
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -27,6 +30,7 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         var text_home = root.findViewById<TextView>(R.id.text_home)
+
         return root
     }
 
