@@ -27,7 +27,6 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         var text_home = root.findViewById<TextView>(R.id.text_home)
-        text_home.setText(R.string.message_home)
         return root
     }
 
