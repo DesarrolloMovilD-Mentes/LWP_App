@@ -11,12 +11,24 @@ import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
 import android.widget.Button
+import com.example.lwp_lab01.ui.home.HomeFragment
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 
+enum class ProviderType{
+    GOOGLE,
+    FACEBOOK
+}
 class SignIn : AppCompatActivity() {
     var auth = FirebaseAuth.getInstance()
 
+    private val GOOGLE_SIGN_IN = 100
     private lateinit var btnAutenticar: Button
+    private lateinit var btnGoogleAuth: Button
+    private lateinit var btnFacebookAuth: Button
     private lateinit var txtEmail: EditText
     private lateinit var txtContra: EditText
     private lateinit var forgotPasswordText: TextView
@@ -27,6 +39,8 @@ class SignIn : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         btnAutenticar = findViewById(R.id.btnOK)
+        btnGoogleAuth = findViewById(R.id.btnGoogle)
+        btnFacebookAuth = findViewById(R.id.btnFacebook)
         txtEmail = findViewById(R.id.txtCorreo)
         txtContra = findViewById(R.id.txtPasswd)
         forgotPasswordText = findViewById(R.id.forgotPasswordText)
@@ -43,7 +57,37 @@ class SignIn : AppCompatActivity() {
             val registerIntent = Intent(this@SignIn, Register::class.java)
             startActivity(registerIntent)
         }
+
+//        btnGoogleAuth.setOnClickListener {
+//            val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id))
+//                .requestEmail()
+//                .build()
+//
+//            val googleClient = GoogleSignIn.getClient(this, googleConf)
+//            googleClient.signOut()
+//            startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
+//        }
     }
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if(requestCode == GOOGLE_SIGN_IN){
+//            val  task = GoogleSignIn.getSignedInAccountFromIntent(data)
+//            try {
+//                val account = task.getResult(ApiException::class.java)
+//                if(account != null){
+//                    val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+//                    FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener{
+//                        if(it.isSuccessful){
+//                            showHome(account.email ?: "", ProviderType.GOOGLE)
+//                        }
+//                    }
+//                }
+//            }catch (e: ApiException){
+//                showAlert("Error","Al autenticar el usuario de Google")
+//            }
+//        }
+//    }
     fun ejecutar(view: View) {
         if(txtEmail.text.isNotEmpty() && txtContra.text.isNotEmpty()){
             auth.signInWithEmailAndPassword(txtEmail.text.toString(), txtContra.text.toString()).addOnCompleteListener{
@@ -83,5 +127,14 @@ class SignIn : AppCompatActivity() {
 
         val diagVentana: AlertDialog = diagMessage.create()
         diagVentana.show()
+    }
+
+    private fun showHome(email: String,provider:ProviderType){
+        val homeIntent = Intent(this, HomeFragment::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider)
+        }
+        startActivity(homeIntent)
+
     }
 }
