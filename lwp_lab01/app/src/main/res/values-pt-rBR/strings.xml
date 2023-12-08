@@ -7,6 +7,8 @@
     <string name="txtRetrievepass">"Alterar a senha "</string>
     <string name="txtForgotPass">"Esqueceu sua senha "</string>
     <string name="txtExitFgPass">Voltar para fazer login</string>
+    <string name="txtFacebookLogin">" Entrar com o Facebook "</string>
+    <string name="txtGoogleLogin">" Entrar com o Google"</string>
     <string name="txtid">Do Utilizador</string>
     <string name="txtpw">Contrasenha</string>
     <string name="hintName">Nome</string>
@@ -24,14 +26,20 @@
     <string name="text_INA">O INA forma, forma e certifica pessoas singulares e colectivas, para contribuir para o crescimento pessoal, mobilidade social, produtividade e competitividade; que permite ao país se adaptar às mudanças que o meio ambiente exige</string>
     <string name="text_MEP">O Ministério da Educação Pública (MEP) da Costa Rica é o ministério do governo responsável pela administração do sistema de educação pública do país. Suas principais funções são executar planos, programas e outras determinações que garantam a educação geral básica, pública e gratuita, coordenar as relações do Poder Executivo</string>
     <string name="title_entities">Reconhecendo entidades</string>
+    <string name="txtAddPhoto">Tire ou selecione uma foto</string>
+    <string name="txtEntitySave">Salvar Entidade</string>
+    <string name="txtTakePhoto">Tirar fotos</string>
+    <string name="txtSelectImage">selecione a imagem</string>
     <string name="title_Credits">Creditos Correspondientes</string>
     <string name="text_Credits">Créditos a quem participou da criação deste projeto. Participantes: Kenneth Piedra Vargas, William Cubero Navarro, Eduard Andrés Arias Quiros e Sebastián Alberto Mata Ortega</string>
     <string name="about_text">A LWP é uma empresa líder em soluções de tecnologia com mais de 10 anos de experiência no mercado. Dedicamo-nos ao desenvolvimento de aplicativos móveis e sistemas web de alta qualidade para nossos clientes em todo o mundo.</string>
     <string name="comment_hint">" Deixe um comentário"</string>
     <string name="submit_comment_text">" Enviar comentário"</string>
     <string name="contact_info_text">Contato: Endereço: Calle Principal #123, Ciudad Tech, Telefone: +123 456 7890, Email: info@lwp.com</string>
+    <string name="txtUserData">Dados do usuário</string>
     <string name="signin">Entrar</string>
     <string name="txtConfirmPass">Confirme sua senha</string>
     <string name="txtDonthaveAcc">" Não tem conta? Inscrever-se"</string>
     <string name="txtLogOut">Sair</string>
+    <string name="txtAddPhotoandComment">"Adicionar foto e imagem "</string>
 </resources>

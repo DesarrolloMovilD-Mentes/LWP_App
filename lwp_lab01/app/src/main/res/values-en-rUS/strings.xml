@@ -7,9 +7,12 @@
     <string name="txtRetrievepass">Change Password</string>
     <string name="txtForgotPass">Forgot Password?</string>
     <string name="txtExitFgPass">Return to Sign In</string>
+    <string name="txtFacebookLogin">Log In With Facebook</string>
+    <string name="txtGoogleLogin">Log In With Google</string>
     <string name="txtid">Username</string>
     <string name="txtpw">Password</string>
-    <string name="signin">Sign In</string>
+    <string name="txtUserData">User Data</string>
+    <string name="signin">Log In</string>
     <string name="hintName">Name</string>
     <string name="hintEmail">Email Address</string>
     <string name="hintScholarGrade">School Grade</string>
@@ -25,6 +28,10 @@
     <string name="text_INA">The INA trains, trains and certifies natural and legal persons, to contribute to personal growth, social mobility, productivity and competitiveness; that allows the country to adapt to the changes that the environment demands</string>
     <string name="text_MEP">The Ministry of Public Education (MEP) of Costa Rica is the government ministry in charge of administering the country\'s public education system. Its main functions are to execute plans, programs and other determinations that guarantee basic, public and free general education, coordinate the relations of the Executive Branch</string>
     <string name="title_entities">Entity Recognition</string>
+    <string name="txtAddPhoto">Take or Select Photo</string>
+    <string name="txtEntitySave">Save Entity</string>
+    <string name="txtTakePhoto">Take Photo</string>
+    <string name="txtSelectImage">Select Image</string>
     <string name="title_Credits">Corresponding Credits</string>
     <string name="text_Credits">Credits to those who participated in the creation of this project. Participants: Kenneth Piedra Vargas, William Cubero Navarro, Eduard Andrés Arias Quiros and Sebastián Alberto Mata Ortega</string>
     <string name="about_text">LWP is a leading technology solutions company with more than 10 years of experience in the market. We are dedicated to developing high-quality mobile applications and web systems for our clients around the world.</string>
@@ -34,4 +41,5 @@
     <string name="txtConfirmPass">Confirm Password</string>
     <string name="txtDonthaveAcc">don\'t have account? Sign Up</string>
     <string name="txtLogOut">Log Out</string>
+    <string name="txtAddPhotoandComment">Add Photo and Comment</string>
 </resources>

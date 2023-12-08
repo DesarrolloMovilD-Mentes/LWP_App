@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textViewNombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:srcCompat="@mipmap/userimage"
         tools:ignore="ContentDescription" />
 
     <TextView
