@@ -48,11 +48,8 @@ class CommentSection : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_commensection)
         btnAddComment = findViewById(R.id.post_detail_add_comment_btn)
-        imageUserPost = findViewById(R.id.post_detail_user_img)
         imageUserPostComment = findViewById(R.id.post_detail_currentuser_img)
         textTitlePDF = findViewById(R.id.post_detail_title)
-        textDate = findViewById(R.id.post_detail_date_name)
-        textInfoPdf = findViewById(R.id.post_detail_desc)
         commentEditText = findViewById(R.id.post_detail_comment)
         commentList = findViewById(R.id.rv_comment)
 
