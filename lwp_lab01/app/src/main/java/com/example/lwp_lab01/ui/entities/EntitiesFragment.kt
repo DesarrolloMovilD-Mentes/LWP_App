@@ -88,10 +88,6 @@ class EntitiesFragment : Fragment() {
         recyclerView.adapter = adapter
 
 
-
-
-
-
         btnTomarFoto.setOnClickListener {
             if (ContextCompat.checkSelfPermission(
                     requireContext(),

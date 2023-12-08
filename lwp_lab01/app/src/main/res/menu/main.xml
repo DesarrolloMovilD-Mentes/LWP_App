@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Item del menú para más opciones representado por tres puntos -->
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/txtLogOut"
-        app:showAsAction="always" />
-</menu>
+        android:id="@+id/action_more"
+        android:icon="@drawable/options_selector"
+    app:showAsAction="always"
+    android:orderInCategory="100">
+
+    <!-- Submenú con las opciones adicionales -->
+    <menu>
+        <item
+            android:id="@+id/action_user_data"
+            android:title="Datos de Usuario" />
+
+        <item
+            android:id="@+id/action_logout"
+            android:title="@string/txtLogOut" />
+
+        <item
+            android:id="@+id/action_user_logo"
+            android:title=""
+            android:icon="@mipmap/userimage"
+            app:showAsAction="ifRoom"/>
+    </menu>
+</item>
+
+    </menu>

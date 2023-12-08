@@ -2,6 +2,7 @@
     <!--    strings for the main toolbar-->
     <string name="app_name">Aprende Mientras Juegas</string>
     <string name="txtLogOut">Cerrar Sesión</string>
+    <string name="txtUserData">Datos de Usuario</string>
 
     <!-- ===========================================================================    -->
     <!--    Strings for login/register screen-->
@@ -14,6 +15,8 @@
     <string name="txtForgotPass">¿Olvidaste tu contraseña?</string>
     <string name="txtExitFgPass">Volver al Inicio de Sesión</string>
     <string name="txtConfirmPass">Confirmar Contraseña</string>
+    <string name="txtFacebookLogin">Iniciar Sesión Con Facebook</string>
+    <string name="txtGoogleLogin">Iniciar Sesión Con Google</string>
     <!-- ===========================================================================    -->
 
 
@@ -50,6 +53,11 @@
     <string name="text_INA">El INA forma, capacita y certifica a personas físicas y jurídicas, para contribuir al crecimiento personal, movilidad social, productividad y competitividad; que permita al país adaptarse a los cambios que el entorno exige</string>
     <string name="text_MEP">El Ministerio de Educación Pública (MEP) de Costa Rica es el ministerio de gobierno encargado de administrar el sistema de educación pública del país.  Sus funciones principales son las de ejecutar planes, programas y otras determinaciones que garanticen una educación general básica, pública y gratuita, coordinar las relaciones del Poder Ejecutivo</string>
     <string name="title_entities">Entidades Reconocedoras</string>
+    <string name="txtAddPhoto">Tomar o Seleccionar Foto</string>
+    <string name="txtEntitySave">Guardar Entidad</string>
+    <string name="txtTakePhoto">Tomar Foto</string>
+    <string name="txtSelectImage">Seleccionar Imagen</string>
+    <string name="txtAddPhotoandComment">Agregar Foto y comentario</string>
     <!-- ===========================================================================    -->
 
     <!--Credits Strings-->

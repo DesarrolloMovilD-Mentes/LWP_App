@@ -10,7 +10,6 @@ import android.content.pm.PackageManager
 import android.app.Activity
 import android.net.Uri
 import com.bumptech.glide.Glide
-import com.squareup.picasso.Picasso
 import com.example.lwp_lab01.databinding.ActivityNewEntityBinding
 
 class NewEntityActivity : AppCompatActivity() {
