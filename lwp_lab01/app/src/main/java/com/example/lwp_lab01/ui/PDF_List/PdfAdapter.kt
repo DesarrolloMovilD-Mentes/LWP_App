@@ -2,6 +2,7 @@ package com.example.lwp_lab01.ui.PDF_List
 
 import android.app.DownloadManager
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -13,8 +14,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lwp_lab01.R
+import com.example.lwp_lab01.ui.comment_List.CommentSection
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -30,6 +33,7 @@ class PdfAdapter(private val pdfList: List<PdfModel>, private val listener: Down
     class PdfViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvPdfName: TextView = view.findViewById(R.id.tvPdfName)
         val btnDownload: Button = view.findViewById(R.id.btnDownload)
+        val btnComments: Button = view.findViewById(R.id.btnComment)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PdfViewHolder {
@@ -49,6 +53,12 @@ class PdfAdapter(private val pdfList: List<PdfModel>, private val listener: Down
             downloadPdf(pdf.url, pdf.nombre)
             // Notify the listener that download has started
             listener.onDownloadStarted(pdf.nombre)
+        }
+        holder.btnComments.setOnClickListener {
+            val context = holder.itemView.context
+            val commentsIntent = Intent(context, CommentSection::class.java)
+            commentsIntent.putExtra("PDF Name",pdf.nombre)
+            context.startActivity(commentsIntent)
         }
     }
 

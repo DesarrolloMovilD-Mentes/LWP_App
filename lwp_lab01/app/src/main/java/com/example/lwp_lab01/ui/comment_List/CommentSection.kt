@@ -61,9 +61,8 @@ class CommentSection : AppCompatActivity() {
 
 // Establecer el adaptador en tu RecyclerView
         commentList.adapter = commentsAdapter
-
-
-        retrievePDF()
+        val nombrePdf = intent.getStringExtra("PDF Name")
+        textTitlePDF.setText(nombrePdf)
         subscribeToRealtimeUpdates()
 
         btnAddComment.setOnClickListener {
@@ -79,26 +78,6 @@ class CommentSection : AppCompatActivity() {
         return cls_comments(pdfName, comment)
     }
     //Function to retrieve a pdf from firebase
-    private fun retrievePDF() = CoroutineScope(Dispatchers.IO).launch {
-        try {
-            val querySnapshot = pdfColectionRef
-                .whereEqualTo("names", "The ugly duckling.pdf")
-                .get()
-                .await()
-            val sb = StringBuilder()
-            for(document in querySnapshot.documents){
-                val PDF = document.toObject<cls_PDFs>()
-                sb.append("${PDF}\n")
-            }
-            withContext(Dispatchers.Main){
-                textTitlePDF.text = sb.toString()
-            }
-        } catch (e: Exception){
-            withContext(Dispatchers.Main){
-                Toast.makeText(this@CommentSection, e.message, Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
 
     //Inserting comments into the PDF
     private fun onAddCommentButtonClick()  = CoroutineScope(Dispatchers.IO).launch {

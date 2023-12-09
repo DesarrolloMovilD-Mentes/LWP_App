@@ -45,7 +45,8 @@
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="113dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/post_detail_comment"
