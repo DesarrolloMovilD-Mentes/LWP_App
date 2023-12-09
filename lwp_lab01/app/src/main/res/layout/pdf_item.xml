@@ -3,51 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="6dp"
+    app:cardElevation="12dp"
     app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/white"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
     android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp">
+    android:layout_marginEnd="20dp"
+    android:outlineSpotShadowColor="@color/black"
+    android:outlineAmbientShadowColor="@color/black">
 
     <RelativeLayout
         android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/img"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@mipmap/pdf"
             android:padding="4dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="6dp"
-            android:id="@+id/img"/>
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"/>
 
         <TextView
+            android:id="@+id/tvPdfName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/pdf_name"
             android:layout_toEndOf="@id/img"
-            android:layout_centerVertical="true"
-            android:text="File Name"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:text="PDF Name"
+            android:textSize="17sp"
             android:letterSpacing="0.02"
             android:includeFontPadding="false"
             android:textColor="@color/black"
-            android:textSize="17sp"
-            android:layout_marginStart="8dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="6dp"/>
+            android:layout_marginStart="8dp"/>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnDownload"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:layout_marginLeft="220dp"
-            android:text="Comentar" />
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:layout_below="@id/tvPdfName"
+            android:layout_alignStart="@id/tvPdfName"
+            android:layout_marginTop="15dp"/>
 
+        <Button
+            android:id="@+id/btnComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:layout_toEndOf="@id/btnDownload"
+            android:layout_alignTop="@id/btnDownload"
+            android:layout_marginStart="10dp"/>
 
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>
