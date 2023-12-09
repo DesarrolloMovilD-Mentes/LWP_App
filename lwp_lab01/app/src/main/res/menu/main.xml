@@ -6,7 +6,8 @@
     <item
         android:id="@+id/action_more"
         android:icon="@drawable/options_selector"
-    app:showAsAction="always"
+        app:showAsAction="always"
+        android:title=""
     android:orderInCategory="100">
 
     <!-- Submenú con las opciones adicionales -->

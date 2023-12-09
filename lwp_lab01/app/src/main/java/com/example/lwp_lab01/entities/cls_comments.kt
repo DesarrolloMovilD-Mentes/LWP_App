@@ -1,7 +1,9 @@
 package com.example.lwp_lab01.entities
 
+import java.util.Date
+
 data class cls_comments(
-    var CommentId: Int = 0,
     var pdfName: String = "",
-    var comment: String = ""
+    var comment: String = "",
+    var date: String = ""
 )

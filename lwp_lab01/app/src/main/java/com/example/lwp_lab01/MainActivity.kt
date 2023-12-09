@@ -88,7 +88,6 @@ class MainActivity : AppCompatActivity() {
         if (email.isNullOrBlank()) {
             val signInIntent = Intent(this, SignIn::class.java)
             startActivity(signInIntent)
-            finish()
         } else {
             val uid = auth.uid
             if (uid.isNullOrEmpty()) {
@@ -98,7 +97,6 @@ class MainActivity : AppCompatActivity() {
                     } else {
                         val signInIntent = Intent(this, SignIn::class.java)
                         startActivity(signInIntent)
-                        finish()
                     }
                 }
             } else {
@@ -153,6 +151,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
+
         return true
     }
 
