@@ -9,6 +9,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.example.lwp_lab01.databinding.FragmentSlideshowBinding
 import com.example.lwp_lab01.R
+import com.example.lwp_lab01.ui.PDF_List.PDF_section
 import com.example.lwp_lab01.ui.comment_List.CommentSection
 
 class SlideshowFragment : Fragment() {
@@ -30,7 +31,7 @@ class SlideshowFragment : Fragment() {
         val moduleEnglish = root.findViewById<ImageView>(R.id.englishModule)
 
         moduleEnglish.setOnClickListener{
-            val EModule = Intent(context, CommentSection::class.java)
+            val EModule = Intent(context, PDF_section::class.java)
             startActivity(EModule)
         }
 
