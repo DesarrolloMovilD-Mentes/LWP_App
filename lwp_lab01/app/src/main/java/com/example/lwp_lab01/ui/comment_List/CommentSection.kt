@@ -24,6 +24,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
+import java.util.Date
 
 
 class CommentSection : AppCompatActivity() {
@@ -36,7 +37,7 @@ class CommentSection : AppCompatActivity() {
     private lateinit var commentEditText: EditText
     private lateinit var commentList: RecyclerView
     var db = FirebaseFirestore.getInstance()
-//    var auth = FirebaseAuth.getInstance()
+//  var auth = FirebaseAuth.getInstance()
     private val commentsColectionRef = Firebase.firestore.collection("comments")
 
 
@@ -60,18 +61,20 @@ class CommentSection : AppCompatActivity() {
 
 
     //Method to get the comment and send it to the collection
-    private fun getComment(idComm: Int): cls_comments{
+    private fun getComment(date:Date): cls_comments{
+        var dt = date.toString()
         val pdfName = textTitlePDF.text.toString()
         val comment =  commentEditText.text.toString()
-        return cls_comments(idComm,pdfName, comment)
+        return cls_comments(pdfName, comment,dt)
     }
     //Function to retrieve a pdf from firebase
 
     //Inserting comments into the PDF
     private fun onAddCommentButtonClick()  = CoroutineScope(Dispatchers.IO).launch {
         var idComm = 1
+        val dt: Date = Date()
         try {
-            val Comment = getComment(idComm)
+            val Comment = getComment(dt)
             commentsColectionRef.add(Comment).await()
             withContext(Dispatchers.Main) {
                 Toast.makeText(this@CommentSection, "Comment Added", Toast.LENGTH_LONG).show()
@@ -92,18 +95,19 @@ class CommentSection : AppCompatActivity() {
         var coleccion: ArrayList<cls_comments?> = ArrayList()
         var listaView: ListView = findViewById(R.id.rv_comment)
         db.collection("comments")
+            .whereEqualTo("pdfName",textTitlePDF.text)
+            .orderBy("date")
             .get()
             .addOnCompleteListener { docc ->
                 if (docc.isSuccessful) {
                     for (document in docc.result!!) {
                         Log.d(TAG, document.id + " => " + document.data)
-                        var datos: cls_comments = cls_comments(document.data["CommentId"].toString().toInt(),
-                            document.data["pdfName"].toString(),
-                            document.data["comment"].toString())
+                        var datos: cls_comments = cls_comments(document.data["pdfName"].toString(),
+                            document.data["comment"].toString(), document.data["date"].toString())
                         coleccion.add(datos)
                     }
                     var adapter: CommentAdapter = CommentAdapter(this, coleccion)
-                    listaView.adapter =adapter
+                    listaView.adapter = adapter
                 } else {
                     Log.w(TAG, "Error getting documents.", docc.exception)
                 }

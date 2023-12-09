@@ -21,9 +21,12 @@ class CommentAdapter
         val dataModal: cls_comments? = getItem(position)
 
         val CommentText = listitemView!!.findViewById<TextView>(R.id.textViewComentario)
+        val dateComment = listitemView!!.findViewById<TextView>(R.id.textViewFecha)
 
         if (dataModal != null) {
             CommentText.setText(dataModal.comment.toString())
+            dateComment.setText(dataModal.date.toString())
+
         }
 
         listitemView.setOnClickListener { // on the item click on our list view.
