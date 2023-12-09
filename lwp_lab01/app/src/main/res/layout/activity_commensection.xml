@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="40dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
+        <ListView
             android:id="@+id/rv_comment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -45,7 +45,8 @@
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="113dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/post_detail_comment"
