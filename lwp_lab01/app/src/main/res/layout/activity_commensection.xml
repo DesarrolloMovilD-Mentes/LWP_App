@@ -40,6 +40,8 @@
             android:id="@+id/post_detail_currentuser_img"
             android:layout_width="36dp"
             android:layout_height="36dp"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            android:scaleType="centerCrop"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
