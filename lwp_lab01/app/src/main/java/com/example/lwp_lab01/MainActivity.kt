@@ -2,15 +2,20 @@ package com.example.lwp_lab01
 
 import NewEntityActivity
 import android.Manifest
+import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.Drawable
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.transition.Transition
+import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.Button
@@ -26,10 +31,15 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.CustomTarget
 import com.example.lwp_lab01.databinding.ActivityMainBinding
 import com.example.lwp_lab01.ui.users.SignIn
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
 import java.io.File
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +47,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     private var auth = FirebaseAuth.getInstance()
+    var db = FirebaseFirestore.getInstance()
+    var imgs = FirebaseStorage.getInstance()
     private var email: String? = null
     private var contra: String? = null
 
@@ -151,7 +163,20 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
-
+//        val userLogoMenuItem = menu.findItem(R.id.action_user_logo)
+//        obtenerDatosUsuario { imageUrl ->
+//            Glide.with(this)
+//                .asDrawable()
+//                .load(imageUrl)
+//                .apply(RequestOptions.circleCropTransform())
+//                .into(object : CustomTarget<Drawable>() {
+//                    override fun onResourceReady(resource: Drawable, transition:Transition<in Drawable>?) {
+//                        userLogoMenuItem.icon = resource
+//                    }
+//                    override fun onLoadCleared(placeholder: Drawable?) {
+//                    }
+//                })
+//        }
         return true
     }
 
@@ -160,8 +185,39 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    // Función para obtener la URL de la imagen del usuario desde Firestore y configurarla como icono
+    private fun obtenerDatosUsuario(callback: (imageUrl: String) -> Unit) {
+        val uid = auth.uid
+        db.collection("datosUsuarios")
+            .whereEqualTo("idemp", uid)
+            .get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val document = task.result?.documents?.firstOrNull()
+                    document?.let {
+                        val imageUrl = it.data?.get("urlImage").toString()
+                        callback(imageUrl)
+                    }
+                } else {
+                    Log.w(ContentValues.TAG, "Error getting documents.", task.exception)
+                }
+            }
+    }
     private fun obtenerDatos() {
-        Toast.makeText(this, "Waiting to do something important", Toast.LENGTH_LONG).show()
+        val uid = auth.uid
+        db.collection("datosUsuarios")
+            .whereEqualTo("idemp", uid)
+            .get()
+            .addOnCompleteListener { docc ->
+                if (docc.isSuccessful) {
+                    for (document in docc.result!!) {
+                        val username = document.data["usuario"].toString()
+                        Toast.makeText(this@MainActivity, "Bienvenido $username", Toast.LENGTH_LONG).show()
+                    }
+                } else {
+                    Log.w(ContentValues.TAG, "Error getting documents.", docc.exception)
+                }
+            }
     }
 
     private fun checkAndRequestPermissions() {

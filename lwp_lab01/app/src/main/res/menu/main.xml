@@ -24,6 +24,11 @@
             android:id="@+id/action_user_logo"
             android:title=""
             android:icon="@mipmap/userimage"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
             app:showAsAction="ifRoom"/>
     </menu>
 </item>
